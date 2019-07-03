@@ -1,0 +1,16 @@
+title = "Resource.rs"
+description = "旨在提供一站式的 Rust 学习资源"
+
+[setup]
+title = "环境配置"
+
+[[setup.item]]
+name = "Rustup"
+url = "https://rustup.rs/"
+description = "官网指定唯一推荐 Rust 安装方式"
+
+
+[[setup.item]]
+name = "Rust Language"
+url = "https://www.rust-lang.org/"
+description = "Rust 语言官网"
