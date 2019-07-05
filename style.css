@@ -1,0 +1,52 @@
+@font-face {
+	font-family: 'Fira Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Fira Sans Light'), url("./fonts/FiraSans-Light.woff") format('woff');
+}
+@font-face {
+	font-family: 'Fira Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Fira Sans'), url("./fonts/FiraSans-Regular.woff") format('woff');
+}
+@font-face {
+	font-family: 'Fira Sans';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Fira Sans Medium'), url("./fonts/FiraSans-Medium.woff") format('woff');
+}
+
+:root {
+	font-family: Fira Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	/*text-align: center;*/
+	background-color: white;
+	background-repeat: no-repeat;
+	color: #202020;
+	line-height: 1.6;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+:root::before {
+	content: url(rust.png);
+	position: absolute;
+	top: -128px;
+	right: -128px;
+	width: 512px;
+	height: 512px;
+	opacity: 0.25;
+	z-index: -2;
+	display: block;
+	-webkit-transform: rotate(35deg);
+	transform: rotate(35deg);
+}
+
+@media screen and (max-width: 50em) {
+	:root { font-size: 20px; line-height: 1.5; }
+	body { padding: 1em 1.5em; }
+}
+
+@media screen and (max-width: 35em) {
+	:root { font-size: 16px; }
+}
