@@ -42,6 +42,13 @@
 	transform: rotate(35deg);
 }
 
+.content {
+    max-width: 40em;
+    padding: 2em 4em;
+    margin: 0 auto;
+    min-height: 600px;
+}
+
 @media screen and (max-width: 50em) {
 	:root { font-size: 20px; line-height: 1.5; }
 	body { padding: 1em 1.5em; }
@@ -50,3 +57,5 @@
 @media screen and (max-width: 35em) {
 	:root { font-size: 16px; }
 }
+
+
