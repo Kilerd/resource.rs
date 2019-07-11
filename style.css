@@ -1,25 +1,6 @@
-@font-face {
-	font-family: 'Fira Sans';
-	font-style: normal;
-	font-weight: 300;
-	src: local('Fira Sans Light'), url("./fonts/FiraSans-Light.woff") format('woff');
-}
-@font-face {
-	font-family: 'Fira Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Fira Sans'), url("./fonts/FiraSans-Regular.woff") format('woff');
-}
-@font-face {
-	font-family: 'Fira Sans';
-	font-style: normal;
-	font-weight: 500;
-	src: local('Fira Sans Medium'), url("./fonts/FiraSans-Medium.woff") format('woff');
-}
-
 :root {
-	font-family: Fira Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-size: 24px;
+	font-family: PingFangSC-Regular, Microsoft Yahei UI, Noto Sans CJK SC DemiLight, sans-serif;
+	font-size: 20px;
 	/*text-align: center;*/
 	background-color: white;
 	background-repeat: no-repeat;
@@ -43,19 +24,29 @@
 }
 
 .content {
-    max-width: 40em;
-    padding: 2em 4em;
+    padding: 2rem 4rem;
     margin: 0 auto;
     min-height: 600px;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 50rem) {
 	:root { font-size: 20px; line-height: 1.5; }
-	body { padding: 1em 1.5em; }
+	body { padding: 1rem 1.5rem; }
 }
 
 @media screen and (max-width: 35em) {
-	:root { font-size: 16px; }
+    :root { font-size: 16px; }
+    .content {
+        padding: 1rem 0.5rem;
+    }
 }
 
-
+a {
+    color: #3873ad;
+    text-decoration: none;
+    padding: 0 2px; 
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
