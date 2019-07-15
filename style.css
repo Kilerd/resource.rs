@@ -58,3 +58,7 @@ a {
   a:hover {
     text-decoration: underline;
   }
+
+  li {
+      padding: .5rem;
+  }
