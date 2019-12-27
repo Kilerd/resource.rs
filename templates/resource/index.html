@@ -27,13 +27,11 @@
             <section class="part">
                 <section class="head">{{ data.toturial.title }}</section>
                 <section class="content">
-                    <nav class="inline">
-                        <ol>
+                        <ol class="ordered">
                             {% for item in data.toturial.items %}
                             <li><a class="normal" href="{{ item.link }}"><span>{{ item.title }}</span></a></li>
                             {% endfor %}
                         </ol>
-                    </nav>
                 </section>
             </section>
 
@@ -131,10 +129,6 @@
             </section>
         </section>
     </main>
-    <pre><code>{{ data | safe | json_encode(pretty=true) }}</code></pre>
-    <pre><code>{{ config | safe | json_encode(pretty=true) }}</code></pre>
-    <pre><code>{{ articles | safe | json_encode(pretty=true) }}</code></pre>
-
     <footer>
         <p class="point"></p>
         <p><a href="" class="normal"><span>我们期待你的加入...</span></a></p>
