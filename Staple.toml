@@ -1,0 +1,23 @@
+[site]
+title = ""
+subtitle = ""
+description = ""
+keywords = []
+author = ""
+email = ""
+utc_offset = 800
+theme = "resource"
+index_data = "index.toml"
+
+[url]
+url = "http://localhost:8000"
+root = "/"
+
+[pagination]
+page_size = 10
+
+[rss]
+enable = false
+article_limited = 10
+
+[extra]

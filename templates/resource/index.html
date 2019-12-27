@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet/less" type="text/css" href="/statics/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <title>Resource.rs - 旨在提供一站式的 Rust 学习资源</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Resource.RS<sup>ALPHA</sup></h1>
+        <nav>
+            <a href="">首页</a>
+            <a href="">页面一</a>
+            <a href="">系列专题</a>
+            <a href="">关于我们</a>
+            <a href="">GitHub</a>
+        </nav>
+    </header>
+    <main class="body">
+        <section class="main">
+            <section class="part">
+                <section class="head">{{ data.toturial.title }}</section>
+                <section class="content">
+                    <nav class="inline">
+                        <ol>
+                            {% for item in data.toturial.items %}
+                            <li><a class="normal" href="{{ item.link }}"><span>{{ item.title }}</span></a></li>
+                            {% endfor %}
+                        </ol>
+                    </nav>
+                </section>
+            </section>
+
+            <section class="part">
+                <section class="head">{{ data.link.title }}</section>
+                <section class="content">
+                    <nav class="inline">
+                        {% for item in data.link.items %}
+                        <a class="normal" href="{{ item.link }}"
+                            title="{{ item.description }}"><span>{{ item.name }}</span></a>
+                        {% endfor %}
+                    </nav>
+                </section>
+            </section>
+
+            <section class="part">
+                <section class="head">{{ data.book.title }}</section>
+                <section class="content">
+                    {% for item in data.book.items %}
+                    <div class="book">
+                        <div class="title">{{ item.title }}</div>
+
+                        <div class="meta">
+                            {% for version in item.version %}
+                            <a href="{{ version.link }}">GO TO {{ version.name }}</a>
+                            {% endfor %}
+                        </div>
+                        <div class="description">
+                            {{ item.description | safe }}
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </section>
+            </section>
+
+        </section>
+        <section class="side">
+            <section class="part">
+                <section class="head">最新文章</section>
+                <section class="content">
+                    <div class="timed-link">
+                        <span class="time">2019/01/01</span>
+                        <a href="">去你丫的 Dark Mode</a>
+                    </div>
+                    <div class="timed-link">
+                        <span class="time">2019/01/01</span>
+                        <a href="">180° 第十九期 • 汉仪西文字体设计师张暄</a>
+                    </div>
+                    <div class="timed-link">
+                        <span class="time">2019/01/01</span>
+                        <a href="">2019 年度线下活动上海站</a>
+                    </div>
+                    <div class="timed-link">
+                        <span class="time">2019/01/01</span>
+                        <a href="">滤镜这门生意</a>
+                    </div>
+                </section>
+            </section>
+
+            <section class="part">
+                <section class="head">Reddit 流行</section>
+                <section class="content">
+                    <div class="reddit-link">
+                        <span class="mark">155</span>
+                        <a href="">Lyon 0.15.0 - A new tessellator</a>
+                    </div>
+                    <div class="reddit-link">
+                        <span class="mark">121</span>
+                        <a href="">Show /r/rust: DumbNet, Artificial Neural Networks without a Heap. [no_std]</a>
+                    </div>
+                    <div class="reddit-link">
+                        <span class="mark">363</span>
+                        <a href="">actix-web v2.0 released</a>
+                    </div>
+                </section>
+            </section>
+
+            <section class="part">
+                <section class="head">系列专题</section>
+                <section class="content">
+                    <div class="reddit-link">
+                        <span class="mark">155</span>
+                        <a href="">Lyon 0.15.0 - A new tessellator</a>
+                    </div>
+                    <div class="reddit-link">
+                        <span class="mark">121</span>
+                        <a href="">Show /r/rust: DumbNet, Artificial Neural Networks without a Heap. [no_std]</a>
+                    </div>
+                    <div class="reddit-link">
+                        <span class="mark">363</span>
+                        <a href="">actix-web v2.0 released</a>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+    <pre><code>{{ data | safe | json_encode(pretty=true) }}</code></pre>
+    <pre><code>{{ config | safe | json_encode(pretty=true) }}</code></pre>
+    <pre><code>{{ articles | safe | json_encode(pretty=true) }}</code></pre>
+
+    <footer>
+        <p class="point"></p>
+        <p><a href="" class="normal"><span>我们期待你的加入...</span></a></p>
+    </footer>
+
+</body>
+
+</html>

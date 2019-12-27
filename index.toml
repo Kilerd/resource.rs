@@ -1,0 +1,116 @@
+[toturial]
+title = "新手入门"
+
+[[toturial.items]]
+title = "安装 Rust 及 IDE 的选择"
+link = ""
+
+[[toturial.items]]
+title = "实用工具与插件"
+link = ""
+
+[[toturial.items]]
+title = "加入 Telegram 群组"
+link = ""
+
+[[toturial.items]]
+title = "其他社群和资源"
+link = ""
+
+
+[link]
+title = "日常开发中会经常使用的网站"
+
+[[link.items]]
+name = "Standard Library API Reference"
+link = "https://doc.rust-lang.org/std/"
+description = "标准库文档"
+
+[[link.items]]
+name = "Docs.rs"
+link = "https://docs.rs/"
+description = "查看第三方库的文档索引"
+
+[[link.items]]
+name = "Crates.io"
+link = "https://crates.io/"
+description = "Rust 第三方库仓库"
+
+[[link.items]]
+name = "Lib.rs"
+link = "https://lib.rs/"
+description = "一个提供了不同领域下优质 crate 的索引。当你需要查看某个领域比较流行的 crate 时，可以阅读。"
+
+[[link.items]]
+name = "Rust cheat sheet"
+link = "https://upsuper.github.io/rust-cheatsheet/"
+description = "一份由 @Upsuper 大佬实现的关于 Option、Result、Iterator 和 [u8] 的相关函数速查表，相当实用。"
+
+
+[book]
+title = "各种教程和书籍"
+
+[[book.items]]
+title = "The Rust Programming Language"
+description = "这是由官方提供的面向全体 Rust 人员的教程，简称「TRPL」。非常适合入门的小伙伴阅读，因为该书系统得提供了 Rust 的特点和设计思想。该书也可以当作 Cookbook，在碰到问题时反复查看。"
+[[book.items.version]]
+name = "English"
+link = "https://doc.rust-lang.org/book/#the-rust-programming-language"
+[[book.items.version]]
+name = "中文"
+link = "https://kaisery.github.io/trpl-zh-cn/foreword.html"
+
+
+[[book.items]]
+title = "Rust by Example"
+description = "该书在设计上很像 TRPL，但是提供了很多适合用于实践的例子，以体验 Rust 的设计思想。该书同样适合于入门，但是原理和内容不及 TRPL 丰富，但是通过项目驱动可以得到较多的练习过程。"
+[[book.items.version]]
+name = "English"
+link = "https://doc.rust-lang.org/rust-by-example/"
+
+[[book.items]]
+title = "The Rust Programming Language"
+description = "这是由官方提供的面向全体 Rust 人员的教程，简称「TRPL」。非常适合入门的小伙伴阅读，因为该书系统得提供了 Rust 的特点和设计思想。该书也可以当作 Cookbook，在碰到问题时反复查看。"
+[[book.items.version]]
+name = "English"
+link = "https://doc.rust-lang.org/book/#the-rust-programming-language"
+[[book.items.version]]
+name = "中文"
+link = "https://kaisery.github.io/trpl-zh-cn/foreword.html"
+
+[[book.items]]
+title = "The Little Book of Rust Macros / 宏小本"
+description = "开发者们都说 Rust 的宏是卫生宏，比CPP的宏如何优秀如何好用。那么这本小册子就从源头讲解了 Rust 的整个宏系统，但是由于编写时间过早并没有讲解过程宏。"
+[[book.items.version]]
+name = "English"
+link = "https://danielkeep.github.io/tlborm/book/index.html"
+[[book.items.version]]
+name = "中文"
+link = "http://blog.luxko.site/tlborm-chinese/book/index.html"
+
+[[book.items]]
+title = "Asynchronous Programming in Rust / Rust 中的异步编程"
+description = "鉴于 Future 和 async/awiat 语法的基本实现完成，Rust 中新一代的异步系统已经达成了 MVP 的目标，官方便开始逐步编写和完善该书。该书阐述了 Future 的生态和实现，比较详细地描述了 executor 和 waker 的工作机制。"
+[[book.items.version]]
+name = "English"
+link = "https://rust-lang.github.io/async-book/"
+[[book.items.version]]
+name = "中文"
+link = "https://huangjj27.github.io/async-book/index.html"
+
+[[book.items]]
+title = "Rust Cookbook"
+description = "Rust Cookbook一本覆盖面很全，例子不是特别多的 cookbook，但是提供了很多常见编程内容的例子和 DEMO，内容包括了算法、CLI编程、解压缩、并发、加解密、数据结构、数据库调用、日期与时间、DEBUG、版本控制、链接C库、编码与解码、文件系统、内存管理、TCP/IP、操作系统操作、数学运算、文本处理、爬虫、URL处理、MIME、HTTP客户端调用 等。"
+[[book.items.version]]
+name = "English"
+link = "https://rust-lang-nursery.github.io/rust-cookbook/intro.html"
+
+[[book.items]]
+title = "The Rustonomicon / Rust死灵书 - Rust高级与非安全程序设计"
+description = "当发现读完其他书都无法满足你时，可以阅读这本描述了 Rust 中 unsafe 及 HRTB 相关内容的书籍。<br>中文版已经相当 Outdated，建议阅读英文版。"
+[[book.items.version]]
+name = "English"
+link = "https://doc.rust-lang.org/nomicon/"
+[[book.items.version]]
+name = "中文"
+link = "https://github.com/tjxing/rustonomicon_zh-CN"

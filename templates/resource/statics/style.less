@@ -1,0 +1,91 @@
+@rust: #dea584;
+@darken-rust: darken(@rust, 20%);
+@main-black: #333;
+@darken-black: #000;
+
+html {
+    border-top: .5rem solid @rust;
+    background-color: #f5f5f5;
+    font-size: 15px;
+    font-family: 'Myriad Pro', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+
+body {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+a.normal {
+    text-decoration: none;
+    color: @main-black;
+
+    span {
+        border-bottom: 1px dotted @main-black;
+    }
+
+    &:hover {
+        color: @darken-black;
+
+        span {
+            border-bottom: 1px solid @darken-rust;
+        }
+    }
+}
+
+header {
+    margin: 2rem 0;
+
+    h1 {
+        font-size: 4rem;
+        color: #333;
+        font-weight: 700;
+        font-family: "Anyway Serif", "Title Serif", "Source Han Serif SC", "Songti SC", SimSun, serif;
+        text-align: left;
+        margin: 0 1em 0 0;
+        position: relative;
+        background: #fff;
+        padding: .05em .4em;
+        display: inline-block;
+
+        sup {
+            font-size: .15em;
+            line-height: 1.2;
+            margin: 0;
+            border: none;
+            display: block;
+            background: #444;
+            color: #fff;
+            padding: .22em .3em .1em;
+            font-family: "Anyway Type", "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-weight: 400;
+            position: absolute;
+            display: inline-block;
+            right: -3em;
+            top: 1em;
+            text-shadow: none;
+        }
+    }
+}
+
+main.body {
+    display: flex;
+    flex-direction: row;
+
+    section.main {
+        flex: 0 0 60%;
+    }
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+
+    p.point {
+        width: 1.6rem;
+        margin: 0 auto .75rem;
+        height: 1.6rem;
+        background: @rust;
+        animation: square-rotate 10s ease-in-out infinite;
+    }
+}
