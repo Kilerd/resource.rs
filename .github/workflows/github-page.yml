@@ -1,0 +1,19 @@
+name: Build GitHub page
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Staple
+        run: cargo install --git https://github.com/Kilerd/staple
+      - name: Build blog
+        run: staple build
+      - name: Deploy site to gh-pages branch
+        uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
+        with:
+          site-directory: public
+          repo-token: ${{ secrets.GH_PAT }}
