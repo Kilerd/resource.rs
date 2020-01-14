@@ -32,6 +32,10 @@ nav_title = "其他社群和资源"
 file = "comunities.md"
 template = "page.html"
 
+[[statics]]
+from = "CNAME"
+to = "CNAME"
+
 
 
 [pagination]
