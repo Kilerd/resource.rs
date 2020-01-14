@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
@@ -15,8 +15,8 @@
     <header>
         <h1>Resource.RS<sup>ALPHA</sup></h1>
         <nav>
-            <a class="normal" href=""><span>首页</span></a>
-            <a class="normal" href=""><span>专题系列</span></a>
+            <a class="normal" href="/"><span>首页</span></a>
+            <a class="normal" href="/"><span>专题系列</span></a>
             <a class="normal" href="/about"><span>关于我们</span></a>
             <a class="normal" href="https://github.com/Kilerd/resource.rs" target="_blank"><span>GitHub</span></a>
         </nav>
@@ -52,7 +52,7 @@
                     {% for item in data.book.items %}
                     <div class="book">
                         <div class="title">{{ item.title }}</div>
-                        <div class="description">
+                        <div class="description han-init-context">
                             {{ item.description | safe }}
                         </div>
                         <div class="meta">
@@ -133,5 +133,4 @@
     </footer>
 
 </body>
-
 </html>
