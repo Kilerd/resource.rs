@@ -13,6 +13,27 @@ index_data = "index.toml"
 url = "http://localhost:8000"
 root = "/"
 
+[[pages]]
+show_in_nav = false
+nav_title = "安装 Rust 及 IDE 的选择"
+file = "installation-and-setup.md"
+template = "page.html"
+
+[[pages]]
+show_in_nav = false
+nav_title = "实用工具与插件"
+file = "tools-and-plugins.md"
+template = "page.html"
+
+
+[[pages]]
+show_in_nav = false
+nav_title = "其他社群和资源"
+file = "comunities.md"
+template = "page.html"
+
+
+
 [pagination]
 page_size = 10
 

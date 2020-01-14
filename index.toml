@@ -3,19 +3,19 @@ title = "新手入门"
 
 [[toturial.items]]
 title = "安装 Rust 及 IDE 的选择"
-link = ""
+link = "/installation-and-setup"
 
 [[toturial.items]]
 title = "实用工具与插件"
-link = ""
+link = "/tools-and-plugins"
 
 [[toturial.items]]
 title = "加入 Telegram 群组"
-link = ""
+link = "https://t.me/rust_zh"
 
 [[toturial.items]]
 title = "其他社群和资源"
-link = ""
+link = "/comunities"
 
 
 [link]

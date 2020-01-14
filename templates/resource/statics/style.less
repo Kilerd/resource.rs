@@ -67,6 +67,11 @@ header {
             text-shadow: none;
         }
     }
+
+    nav {
+        padding: 1rem 0;
+        font-size: 1.25rem;
+    }
 }
 
 main.body {
@@ -74,7 +79,7 @@ main.body {
     flex-direction: row;
 
     section.main {
-        flex: 0 0 60%;
+        flex: 0 0 100%;
     }
 }
 
@@ -138,28 +143,68 @@ nav.inline {
 }
 
 div.book {
+    padding: 1rem 0;
+    div.title {
+        color: #333333;
+        font-size: 1.25rem;
+        margin-bottom: 0.15rem;
+    }
+    div.desciption {
+        color:#444444;
+        font-size: 0.95rem;
+    }
     div.meta {
         a {
-            border      : none;
             display     : inline-flex;
-            font-weight : 700;
-            align-items : center;
             font-size   : .86em;
-            transition  : all .12s ease-out;
-            margin-right: 1em;
-            padding     : .05em .3em 0 .4em;
-            background-color  : #aaa;
+            color: #444;
+            background-color  : #e2e2e2;
+            text-decoration: none;
+            padding: 0.15rem .5rem;
 
             &:hover {
                 background-color  : @darken-rust;
-                border      : none;
                 color       : #fff;
-                margin-right: 0;
-
-                &::after {
-                    content: " > ";
-                }
+        
             }
         }
+    }
+
+    &:not(:first-child) {
+        border-top: 1px dotted #aaa;
+    }
+}
+
+
+div.timed-link {
+    display: flex;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+    span.time {
+        margin-right: 0.2rem;
+        color: #aaa;
+        font-size: 0.85rem;
+    }
+}
+
+div.reddit-link {
+    display: flex;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+    span.mark {
+        margin-right: 0.2rem;
+        color: #aaa;
+        font-size: 0.85rem;
+    }
+}
+
+div.reddit-link {
+    display: flex;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+    span.mark {
+        margin-right: 0.2rem;
+        color: #aaa;
+        font-size: 0.85rem;
     }
 }

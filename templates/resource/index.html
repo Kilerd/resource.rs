@@ -15,11 +15,10 @@
     <header>
         <h1>Resource.RS<sup>ALPHA</sup></h1>
         <nav>
-            <a href="">首页</a>
-            <a href="">页面一</a>
-            <a href="">系列专题</a>
-            <a href="">关于我们</a>
-            <a href="">GitHub</a>
+            <a class="normal" href=""><span>首页</span></a>
+            <a class="normal" href=""><span>专题系列</span></a>
+            <a class="normal" href="/about"><span>关于我们</span></a>
+            <a class="normal" href="https://github.com/Kilerd/resource.rs" target="_blank"><span>GitHub</span></a>
         </nav>
     </header>
     <main class="body">
@@ -27,11 +26,11 @@
             <section class="part">
                 <section class="head">{{ data.toturial.title }}</section>
                 <section class="content">
-                        <ol class="ordered">
-                            {% for item in data.toturial.items %}
-                            <li><a class="normal" href="{{ item.link }}"><span>{{ item.title }}</span></a></li>
-                            {% endfor %}
-                        </ol>
+                    <ol class="ordered">
+                        {% for item in data.toturial.items %}
+                        <li><a class="normal" href="{{ item.link }}"><span>{{ item.title }}</span></a></li>
+                        {% endfor %}
+                    </ol>
                 </section>
             </section>
 
@@ -53,14 +52,13 @@
                     {% for item in data.book.items %}
                     <div class="book">
                         <div class="title">{{ item.title }}</div>
-
-                        <div class="meta">
-                            {% for version in item.version %}
-                            <a href="{{ version.link }}">GO TO {{ version.name }}</a>
-                            {% endfor %}
-                        </div>
                         <div class="description">
                             {{ item.description | safe }}
+                        </div>
+                        <div class="meta">
+                            {% for version in item.version %}
+                            <a href="{{ version.link }}" target="_blank">GO TO {{ version.name }}</a>
+                            {% endfor %}
                         </div>
                     </div>
 
@@ -70,42 +68,42 @@
 
         </section>
         <section class="side">
-            <section class="part">
+            <!-- <section class="part">
                 <section class="head">最新文章</section>
                 <section class="content">
                     <div class="timed-link">
-                        <span class="time">2019/01/01</span>
-                        <a href="">去你丫的 Dark Mode</a>
+                        <span class="time">01/01</span>
+                        <a  class="normal" href=""><span>去你丫的 Dark Mode</span></a>
                     </div>
                     <div class="timed-link">
-                        <span class="time">2019/01/01</span>
-                        <a href="">180° 第十九期 • 汉仪西文字体设计师张暄</a>
+                        <span class="time">01/01</span>
+                        <a class="normal" href=""><span>180° 第十九期 • 汉仪西文字体设计师张暄</span></a>
                     </div>
                     <div class="timed-link">
-                        <span class="time">2019/01/01</span>
-                        <a href="">2019 年度线下活动上海站</a>
+                        <span class="time">01/01</span>
+                        <a class="normal" href=""><span>2019 年度线下活动上海站</span></a>
                     </div>
                     <div class="timed-link">
-                        <span class="time">2019/01/01</span>
-                        <a href="">滤镜这门生意</a>
+                        <span class="time">01/01</span>
+                        <a class="normal" href=""><span>滤镜这门生意</span></a>
                     </div>
                 </section>
-            </section>
+            </section> -->
 
-            <section class="part">
+            <!-- <section class="part">
                 <section class="head">Reddit 流行</section>
                 <section class="content">
                     <div class="reddit-link">
                         <span class="mark">155</span>
-                        <a href="">Lyon 0.15.0 - A new tessellator</a>
+                        <a class="normal" href=""><span>Lyon 0.15.0 - A new tessellator</span></a>
                     </div>
                     <div class="reddit-link">
                         <span class="mark">121</span>
-                        <a href="">Show /r/rust: DumbNet, Artificial Neural Networks without a Heap. [no_std]</a>
+                        <a class="normal" href=""><span>Show /r/rust: DumbNet, Artificial Neural Networks without a Heap. [no_std]</span></a>
                     </div>
                     <div class="reddit-link">
                         <span class="mark">363</span>
-                        <a href="">actix-web v2.0 released</a>
+                        <a class="normal" href=""><span>actix-web v2.0 released</span></a>
                     </div>
                 </section>
             </section>
@@ -115,23 +113,23 @@
                 <section class="content">
                     <div class="reddit-link">
                         <span class="mark">155</span>
-                        <a href="">Lyon 0.15.0 - A new tessellator</a>
+                        <a class="normal" href=""><span>Lyon 0.15.0 - A new tessellator</span></a>
                     </div>
                     <div class="reddit-link">
                         <span class="mark">121</span>
-                        <a href="">Show /r/rust: DumbNet, Artificial Neural Networks without a Heap. [no_std]</a>
+                        <a class="normal" href=""><span>Show /r/rust: DumbNet, Artificial Neural Networks without a Heap. [no_std]</span></a>
                     </div>
                     <div class="reddit-link">
                         <span class="mark">363</span>
-                        <a href="">actix-web v2.0 released</a>
+                        <a class="normal" href=""><span>actix-web v2.0 released</span></a>
                     </div>
                 </section>
-            </section>
+            </section> -->
         </section>
     </main>
     <footer>
         <p class="point"></p>
-        <p><a href="" class="normal"><span>我们期待你的加入...</span></a></p>
+        <p><a href="https://github.com/Kilerd/resource.rs" class="normal"><span>我们期待你的加入...</span></a></p>
     </footer>
 
 </body>
