@@ -68,16 +68,6 @@ name = "English"
 link = "https://doc.rust-lang.org/rust-by-example/"
 
 [[book.items]]
-title = "The Rust Programming Language"
-description = "这是由官方提供的面向全体 Rust 人员的教程，简称「TRPL」。非常适合入门的小伙伴阅读，因为该书系统得提供了 Rust 的特点和设计思想。该书也可以当作 Cookbook，在碰到问题时反复查看。"
-[[book.items.version]]
-name = "English"
-link = "https://doc.rust-lang.org/book/#the-rust-programming-language"
-[[book.items.version]]
-name = "中文"
-link = "https://kaisery.github.io/trpl-zh-cn/foreword.html"
-
-[[book.items]]
 title = "Rust 🦀 and WebAssembly / Rust 与 WASM"
 description = "官方出品的关于 WASM 的书籍"
 [[book.items.version]]
