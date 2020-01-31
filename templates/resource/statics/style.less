@@ -69,7 +69,7 @@ header {
     }
 
     nav {
-        padding: 1rem 0;
+        padding  : 1rem 0;
         font-size: 1.25rem;
     }
 }
@@ -98,6 +98,7 @@ footer {
 
 section.part {
     padding: 1.5rem 1rem;
+
     section.head {
         font-size: 1.5rem;
     }
@@ -144,28 +145,31 @@ nav.inline {
 
 div.book {
     padding: 1rem 0;
+
     div.title {
-        color: #333333;
-        font-size: 1.25rem;
+        color        : #333333;
+        font-size    : 1.25rem;
         margin-bottom: 0.15rem;
     }
+
     div.desciption {
-        color:#444444;
+        color    : #444444;
         font-size: 0.95rem;
     }
+
     div.meta {
         a {
-            display     : inline-flex;
-            font-size   : .86em;
-            color: #444;
-            background-color  : #e2e2e2;
-            text-decoration: none;
-            padding: 0.15rem .5rem;
+            display         : inline-flex;
+            font-size       : .86em;
+            color           : #444;
+            background-color: #e2e2e2;
+            text-decoration : none;
+            padding         : 0.15rem .5rem;
 
             &:hover {
-                background-color  : @darken-rust;
-                color       : #fff;
-        
+                background-color: @darken-rust;
+                color           : #fff;
+
             }
         }
     }
@@ -177,35 +181,66 @@ div.book {
 
 
 div.timed-link {
-    display: flex;
-    align-items: flex-start;
-    margin: 0.5rem 0;
+    display    : flex;
+    align-items: flex-end;
+    margin     : 0.5rem 0;
+
     span.time {
-        margin-right: 0.2rem;
-        color: #aaa;
-        font-size: 0.85rem;
+        font-size        : .75rem;
+        color            : #aaa;
+        padding-right    : 0.25rem;
+        min-width: 75px;
+    }
+}
+
+ol.ordered {
+    list-style-type: none;
+    counter-reset  : item;
+    padding        : 0;
+
+    li {
+        display: inline;
+
+        a:before {
+
+            font-size        : .75rem;
+            color            : #aaa;
+            padding-right    : 0.25rem;
+            content          : "0x"counters(item, ".");
+            counter-increment: item
+        }
+
+        &:not(:first-child) {
+            &:before {
+                content: "/";
+                padding: 0 .5rem;
+                color  : @main-black;
+            }
+        }
     }
 }
 
 div.reddit-link {
-    display: flex;
+    display    : flex;
     align-items: flex-start;
-    margin: 0.5rem 0;
+    margin     : 0.5rem 0;
+
     span.mark {
         margin-right: 0.2rem;
-        color: #aaa;
-        font-size: 0.85rem;
+        color       : #aaa;
+        font-size   : 0.85rem;
     }
 }
 
 div.reddit-link {
-    display: flex;
+    display    : flex;
     align-items: flex-start;
-    margin: 0.5rem 0;
+    margin     : 0.5rem 0;
+
     span.mark {
         margin-right: 0.2rem;
-        color: #aaa;
-        font-size: 0.85rem;
+        color       : #aaa;
+        font-size   : 0.85rem;
     }
 }
 
@@ -219,11 +254,11 @@ div.reddit-link {
 /*MARKDOWN*/
 .yue {
     font-family: 'Myriad Pro', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    color: #444443
+    color      : #444443
 }
 
 .windows .yue {
-    font-size: 1.2rem;
+    font-size  : 1.2rem;
     font-family: Georgia, SimSun, sans-serif
 }
 
@@ -235,126 +270,174 @@ div.reddit-link {
     background-color: rgba(0, 0, 0, .2)
 }
 
-.yue, .yue h1, .yue h2, .yue h3, .yue h4, .yue h5, .yue h6, .yue code, .yue blockquote, .yue em, .yue strong, .yue code {
-    font-size: 1rem;
+.yue,
+.yue h1,
+.yue h2,
+.yue h3,
+.yue h4,
+.yue h5,
+.yue h6,
+.yue code,
+.yue blockquote,
+.yue em,
+.yue strong,
+.yue code {
+    font-size  : 1rem;
     line-height: 2rem;
-    font-style: normal;
+    font-style : normal;
 }
 
-.yue h1, .yue h2, .yue h3, .yue h4, .yue h5, .yue h6, .yue code, .yue blockquote, .yue ol, .yue ul, .yue dl, .yue li, .yue p, .yue section, .yue header, .yue footer {
-    float: none;
-    margin: 0;
+.yue h1,
+.yue h2,
+.yue h3,
+.yue h4,
+.yue h5,
+.yue h6,
+.yue code,
+.yue blockquote,
+.yue ol,
+.yue ul,
+.yue dl,
+.yue li,
+.yue p,
+.yue section,
+.yue header,
+.yue footer {
+    float  : none;
+    margin : 0;
     padding: 0
 }
 
 // .yue h1, .yue p, .yue ul, .yue dl, .yue ol, .yue blockquote {
-//     margin-top: 1.5rem;
+//     margin-top   : 1.5rem;
 //     margin-bottom: 1.5rem
 // }
 
-.yue h1, .yue h2, .yue h3, .yue h4, .yue h5, .yue h6 {
-    position: relative;
-    margin: 1rem 0;
+.yue h1,
+.yue h2,
+.yue h3,
+.yue h4,
+.yue h5,
+.yue h6 {
+    position   : relative;
+    margin     : 1rem 0;
     line-height: 1rem;
     font-weight: normal;
 }
 
 .yue h1 {
-    font-size: 1.5rem;
+    font-size  : 1.5rem;
     line-height: 1.5rem;
 }
+
 .yue h2 {
-    font-size: 1.35rem;
+    font-size  : 1.35rem;
     line-height: 1.35rem;
 }
+
 .yue h3 {
-    font-size: 1.15rem;
+    font-size  : 1.15rem;
     line-height: 1.15rem;
 }
 
 
-.yue h1:before, .yue h2:before, .yue h3:before, .yue h4:before, .yue h5:before, .yue h6:before {
+.yue h1:before,
+.yue h2:before,
+.yue h3:before,
+.yue h4:before,
+.yue h5:before,
+.yue h6:before {
     display: inline;
-    color: #d6d6d6;
+    color  : #d6d6d6;
 }
 
 @media screen and (min-width: 66rem) {
-    .yue h1:before, .yue h2:before, .yue h3:before, .yue h4:before, .yue h5:before, .yue h6:before {
-        display: block;
-        position: absolute;
-        transform: translateX(-100%);
+
+    .yue h1:before,
+    .yue h2:before,
+    .yue h3:before,
+    .yue h4:before,
+    .yue h5:before,
+    .yue h6:before {
+        display      : block;
+        position     : absolute;
+        transform    : translateX(-100%);
         padding-right: 0.6rem
     }
 }
 
 .yue h1:before {
-    content: "H1 ";
+    content  : "H1 ";
     font-size: 1rem;
 }
 
 .yue h2:before {
-    content: "H2 ";
+    content  : "H2 ";
     font-size: 1rem;
 }
 
 .yue h3:before {
-    content: "H3 ";
+    content  : "H3 ";
     font-size: 1rem;
 }
 
 .yue h4:before {
-    content: "H4 ";
+    content  : "H4 ";
     font-size: 1rem;
 }
 
 .yue h5:before {
-    content: "H5 ";
+    content  : "H5 ";
     font-size: 1rem;
 }
 
 .yue h6:before {
-    content: "H6 ";
+    content  : "H6 ";
     font-size: 1rem;
 }
 
 .yue p {
-    margin-top: 0;
+    margin-top   : 0;
     margin-bottom: 1rem
 }
 
 .yue a {
-    color: @darken-rust;
-    word-wrap: break-word;
+    color          : @darken-rust;
+    word-wrap      : break-word;
     text-decoration: none;
-    border-bottom: 1px dotted @rust;
+    border-bottom  : 1px dotted @rust;
 }
 
 .yue a:hover {
     /*border-bottom: 1px solid #dc1313*/
-    border-bottom: 1px solid @darken-rust;
+    border-bottom  : 1px solid @darken-rust;
 }
 
-.yue h1 a, .yue h2 a, .yue h3 a {
+.yue h1 a,
+.yue h2 a,
+.yue h3 a {
     text-decoration: none
 }
 
-.yue b, .yue strong {
+.yue b,
+.yue strong {
     font-weight: 700;
-    color: #222223
+    color      : #222223
 }
 
 
-.yue em, .yue i {
-    font-style: italic;
+.yue em,
+.yue i {
+    font-style : italic;
     font-weight: 400;
-    color: #222223
+    color      : #222223
 }
 
 
 .yue img {
     max-width: 100%;
-    height: auto;
-    margin: .2em 0
+    height   : auto;
+    margin   : .2em 0
 }
 
 .yue a img {
@@ -362,55 +445,57 @@ div.reddit-link {
 }
 
 .yue figure {
-    position: relative;
-    clear: both;
-    outline: 0;
-    margin: 10px 0 30px;
-    padding: 0;
+    position  : relative;
+    clear     : both;
+    outline   : 0;
+    margin    : 10px 0 30px;
+    padding   : 0;
     min-height: 100px
 }
 
 .yue figure img {
-    display: block;
-    max-width: 100%;
-    margin: auto auto 4px;
+    display   : block;
+    max-width : 100%;
+    margin    : auto auto 4px;
     box-sizing: border-box
 }
 
 .yue figure figcaption {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    left: 0;
-    margin-top: 10px;
+    position   : relative;
+    width      : 100%;
+    text-align : center;
+    left       : 0;
+    margin-top : 10px;
     font-weight: 400;
-    font-size: 14px;
-    color: #666665
+    font-size  : 14px;
+    color      : #666665
 }
 
 .yue figure figcaption a {
     text-decoration: none;
-    color: #666665
+    color          : #666665
 }
 
 .yue hr {
-    border: none;
+    border       : none;
     border-bottom: 1px solid #cfcfcf;
     margin-bottom: .8em;
-    height: 10px
+    height       : 10px
 }
 
 .yue blockquote {
-    margin: 0 0 1.64em 0;
-    border-left: 5px solid #dadada;
+    margin      : 0 0 1.64em 0;
+    border-left : 5px solid #dadada;
     padding-left: 12px
 }
+
 .yue blockquote p {
     color: #888;
 }
 
-.yue ol, .yue ul {
-    margin: 0 0 24px 6px;
+.yue ol,
+.yue ul {
+    margin      : 0 0 24px 6px;
     padding-left: 16px
 }
 
@@ -426,10 +511,11 @@ div.reddit-link {
     margin-bottom: .2em
 }
 
-.yue li ol, .yue li ul {
-    margin-top: 0;
+.yue li ol,
+.yue li ul {
+    margin-top   : 0;
     margin-bottom: 0;
-    margin-left: 14px
+    margin-left  : 14px
 }
 
 .yue li ul {
@@ -446,52 +532,55 @@ div.reddit-link {
 
 .yue .unstyled {
     list-style-type: none;
-    margin: 0;
-    padding: 0
+    margin         : 0;
+    padding        : 0
 }
 
-.yue code, .yue tt {
-    padding: .2em 3px;
-    margin: 0;
-    font-size: 90%;
+.yue code,
+.yue tt {
+    padding         : .2em 3px;
+    margin          : 0;
+    font-size       : 90%;
     background-color: rgba(0, 0, 0, .04);
-    border-radius: 3px;
-    word-break: break-all;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    border-radius   : 3px;
+    word-break      : break-all;
+    font-family     : Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .yue pre {
-    padding: 16px;
-    overflow: auto;
-    /*font-size: 95%;*/
-    line-height: 1.45;
+    padding         : 16px;
+    overflow        : auto;
+    /*font-size     : 95%;*/
+    line-height     : 1.45;
     background-color: #f7f7f7;
-    border-radius: 3px;
-    border: 1px dotted @darken-rust;
+    border-radius   : 3px;
+    border          : 1px dotted @darken-rust;
 }
 
-.yue pre code, .yue pre tt {
-    color: #4c4c4c;
-    border: none;
-    background: 0 0;
-    padding: 0;
+.yue pre code,
+.yue pre tt {
+    color      : #4c4c4c;
+    border     : none;
+    background : 0 0;
+    padding    : 0;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .yue table {
-    width: 100%;
-    max-width: 100%;
+    width          : 100%;
+    max-width      : 100%;
     border-collapse: collapse;
-    border-spacing: 0;
-    margin-bottom: 1.5em;
-    font-size: .96em;
-    box-sizing: border-box
+    border-spacing : 0;
+    margin-bottom  : 1.5em;
+    font-size      : .96em;
+    box-sizing     : border-box
 }
 
-.yue td, .yue th {
+.yue td,
+.yue th {
     text-align: left;
-    padding: 4px 8px 4px 10px;
-    border: 1px solid #dadada
+    padding   : 4px 8px 4px 10px;
+    border    : 1px solid #dadada
 }
 
 .yue td {
@@ -503,8 +592,8 @@ div.reddit-link {
 }
 
 .yue iframe {
-    display: block;
-    max-width: 100%;
+    display      : block;
+    max-width    : 100%;
     margin-bottom: 30px
 }
 
@@ -513,15 +602,15 @@ div.reddit-link {
 }
 
 .yue table pre {
-    margin: 0;
-    padding: 0;
-    border: none;
+    margin    : 0;
+    padding   : 0;
+    border    : none;
     background: 0 0
 }
 
 @media (min-width: 1100px) {
     .yue blockquote {
-        margin-left: 10px;
+        margin-left : 10px;
         padding-left: 20px;
         border-width: 5px
     }
@@ -539,44 +628,49 @@ img {
 
 code[class*="language-"],
 pre[class*="language-"] {
-    color: black;
-    background: none;
-    text-shadow: 0 1px white;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    text-align: left;
-    white-space: pre;
+    color       : black;
+    background  : none;
+    text-shadow : 0 1px white;
+    font-family : Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align  : left;
+    white-space : pre;
     word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
+    word-break  : normal;
+    word-wrap   : normal;
+    line-height : 1.5;
 
     -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+    -o-tab-size  : 4;
+    tab-size     : 4;
 
     -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+    -moz-hyphens   : none;
+    -ms-hyphens    : none;
+    hyphens        : none;
 }
 
 .token {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
     text-shadow: none;
-    background: #b3d4fc;
+    background : #b3d4fc;
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
     text-shadow: none;
-    background: #b3d4fc;
+    background : #b3d4fc;
 }
 
 @media print {
+
     code[class*="language-"],
     pre[class*="language-"] {
         text-shadow: none;
@@ -585,21 +679,21 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1em;
-    margin: .5em 0;
+    padding : 1em;
+    margin  : .5em 0;
     overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
+:not(pre)>code[class*="language-"],
 pre[class*="language-"] {
     background: #f7f7f7;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
-    padding: .1em;
+:not(pre)>code[class*="language-"] {
+    padding      : .1em;
     border-radius: .3em;
-    white-space: normal;
+    white-space  : normal;
 }
 
 .token.comment,
@@ -641,7 +735,7 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #a67f59;
+    color     : #a67f59;
     background: hsla(0, 0%, 100%, .5);
 }
 
